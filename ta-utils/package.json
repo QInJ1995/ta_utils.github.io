@@ -1,0 +1,65 @@
+{
+  "name": "@yh/ta-utils",
+  "version": "3.0.118",
+  "description": "JavaScript 函数库、工具类",
+  "scripts": {
+    "build": "vite build && node ./build/war.js",
+    "publish:utils": "git pull --ff-only && npm version patch --unsafe-perm && gulp build && npm publish && git push --follow-tags && gulp clean",
+    "test": "jest",
+    "dev": "vite"
+  },
+  "main": "./index.js",
+  "module": "./index.esm.js",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "encryption",
+    "crypto",
+    "internal",
+    "async-validator",
+    "ui-docs",
+    "validator"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "crypto-js": "^4.0.0",
+    "jsrsasign": "^10.1.13",
+    "jsrsasign-util": "^1.0.4",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "ant-design-vue": "^2.2.2",
+    "@ant-design/icons-vue": "^6.0.1",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.0.7",
+    "babel-jest": "^26.6.3",
+    "folder-zip-sync": "^1.0.5",
+    "gulp": "^4.0.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "highlight.js": "^11.0.1",
+    "jest": "^25.1.0",
+    "less": "^4.1.1",
+    "typescript": "^4.0.5",
+    "vite": "^2.3.7",
+    "vue": "^3.1.5"
+  },
+  "artifactId": "ta-utils",
+  "groupId": "com.yh",
+  "keywords": [
+    "utils",
+    "js-util",
+    "js-tool",
+    "tools"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    "face"
+  ],
+  "packaging": "war",
+  "typings": "index.d.ts"
+}
